@@ -1,8 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace VetrinarioCovid_19_20 
-{ 
-
+{
     class Conexion
     {
         /// <summary>
@@ -14,7 +14,7 @@ namespace VetrinarioCovid_19_20
         /// String que define la cadena de conexion a nuestra base de datos
         /// Debemos especificar Server; Database; Uid; Pwd; Port;
         /// </summary>
-        string conexionSQL = "Server = 127.0.0.1; Database = veterinarios el sauce; Uid = root; Pwd = ; Port = 3306";
+        string conexionSQL = "Server = 127.0.0.1; Database = veterinaria; Uid = root; Pwd = ; Port = 3306";
 
         /// <summary>
         /// Constructor de la clase, cuando instancio un objeto de tipo conexion, por defecto se ejecuta este metodo
@@ -24,6 +24,71 @@ namespace VetrinarioCovid_19_20
         {
             conexion = new MySqlConnection(conexionSQL);
         }
+        public Boolean loginVeterinario(string Usuario, string Contraseña)
+        {
+            try
+            {
+                conexion.Open();
+                ///<summary>
+                ///Se parametrizan los datos para evitar que aquellos maleantes 
+                ///puedan acceder a nuestros datos
+                /// </summary>
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM clientes " +
+                                     "where Usuario = @Usuario AND Contraseña = @Contraseña", 
+                                     conexion);
+                consulta.Parameters.AddWithValue("@Usuario", Usuario);
+                consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
 
+                MySqlDataReader resultado = consulta.ExecuteReader();
+
+                if (resultado.Read())
+                {
+                    return true;
+                }
+                conexion.Close();
+                return false;
+            }
+            
+            catch (MySqlException e)
+            {
+                return false;
+            }
+
+    }
+
+        public String insertaUsuario (String Nombre, String Apellidos,
+                                       String DNI, String Correo,
+                                       String Dirección, String Teléfono,
+                                       String Usuario, String Contraseña)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("INSERT INTO clientes " +
+                                     "(Nombre, Apellidos, DNI, Correo, " +
+                                     "Dirección, Teléfono, Usuario, Contraseña) " +
+                                     "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
+                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", conexion);
+                consulta.Parameters.AddWithValue("@Nombre", Nombre);
+                consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
+                consulta.Parameters.AddWithValue("@DNI", DNI);
+                consulta.Parameters.AddWithValue("@Correo", Correo);
+                consulta.Parameters.AddWithValue("@Dirección", Dirección);
+                consulta.Parameters.AddWithValue("@Teléfono", Teléfono);
+                consulta.Parameters.AddWithValue("@Usuario", Usuario);
+                consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
+
+                consulta.ExecuteNonQuery();
+
+                conexion.Close();
+                return "Registro realizado con éxito";
+            }
+            catch (MySqlException e)
+            {
+                return "No se ha podido realizar el registro";
+            }
+
+        }
     }
 }
