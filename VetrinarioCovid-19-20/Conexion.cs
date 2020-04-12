@@ -34,16 +34,21 @@ namespace VetrinarioCovid_19_20
                 ///puedan acceder a nuestros datos
                 /// </summary>
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM clientes " +
-                                     "where Usuario = @Usuario AND Contraseña = @Contraseña", 
+                                     "where Usuario = @Usuario", 
                                      conexion);
+
                 consulta.Parameters.AddWithValue("@Usuario", Usuario);
-                consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
 
                 MySqlDataReader resultado = consulta.ExecuteReader();
 
                 if (resultado.Read())
                 {
-                    return true;
+                    string contraseña = resultado.GetString("Contraseña");
+                    if (BCrypt.Net.BCrypt.Verify(Contraseña, contraseña))
+                    {
+                        return true;
+                    }
+                    return false;
                 }
                 conexion.Close();
                 return false;
