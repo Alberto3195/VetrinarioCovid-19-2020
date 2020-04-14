@@ -1,7 +1,5 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Windows.Forms;
-using BCrypt.Net;
 
 namespace VetrinarioCovid_19_20
 {

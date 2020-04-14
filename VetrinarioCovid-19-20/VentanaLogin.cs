@@ -10,7 +10,6 @@ namespace VetrinarioCovid_19_20
         /// </summary>
         Conexion miConexion = new Conexion();
         Registro miRegistro = new Registro();
-        Consultas miConsulta = new Consultas();
 
         public VentanaLogin()
         {
@@ -19,7 +18,7 @@ namespace VetrinarioCovid_19_20
 
         private void login_Click(object sender, EventArgs e)
         {
-            if (miConexion.loginVeterinario(user.Text, pass.Text))
+            if (miConexion.loginClientes(user.Text, pass.Text))
             {
                 this.Hide();
                 VentanaPrincipal v = new VentanaPrincipal();
