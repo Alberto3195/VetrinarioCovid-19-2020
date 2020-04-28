@@ -37,53 +37,58 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Buscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Noticia1 = new System.Windows.Forms.Label();
+            this.BuscaId = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -107,7 +112,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(416, 493);
+            this.tabPage1.Size = new System.Drawing.Size(423, 493);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Veterinario";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -157,49 +162,95 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.Buscar);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.Noticia1);
+            this.tabPage2.Controls.Add(this.BuscaId);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(416, 493);
+            this.tabPage2.Size = new System.Drawing.Size(423, 493);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Noticias";
+            this.tabPage2.Text = "Localizador";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.Location = new System.Drawing.Point(12, 224);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(212, 23);
+            this.label22.TabIndex = 8;
+            this.label22.Text = "Historal Médico";
+            // 
+            // label21
+            // 
+            this.label21.Location = new System.Drawing.Point(9, 88);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(212, 23);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "ID: ";
+            // 
+            // label20
+            // 
+            this.label20.Location = new System.Drawing.Point(9, 157);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(212, 23);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Raza: ";
+            // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(9, 180);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(212, 23);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Fecha Nacimiento: ";
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(3, 393);
+            this.label3.Location = new System.Drawing.Point(9, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(404, 95);
-            this.label3.TabIndex = 3;
+            this.label3.Size = new System.Drawing.Size(212, 23);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tipo: ";
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(4, 261);
+            this.label2.Location = new System.Drawing.Point(9, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 119);
-            this.label2.TabIndex = 2;
+            this.label2.Size = new System.Drawing.Size(212, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre: ";
+            // 
+            // Buscar
+            // 
+            this.Buscar.Location = new System.Drawing.Point(230, 32);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(75, 30);
+            this.Buscar.TabIndex = 2;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(4, 132);
+            this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 119);
+            this.label1.Size = new System.Drawing.Size(215, 26);
             this.label1.TabIndex = 1;
+            this.label1.Text = "Localice un paciente por su id";
             // 
-            // Noticia1
+            // BuscaId
             // 
-            this.Noticia1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Noticia1.Location = new System.Drawing.Point(4, 7);
-            this.Noticia1.Name = "Noticia1";
-            this.Noticia1.Size = new System.Drawing.Size(404, 119);
-            this.Noticia1.TabIndex = 0;
+            this.BuscaId.Location = new System.Drawing.Point(8, 32);
+            this.BuscaId.Name = "BuscaId";
+            this.BuscaId.Size = new System.Drawing.Size(216, 22);
+            this.BuscaId.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -241,15 +292,205 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mis Citas";
             // 
-            // tabPage4
+            // label16
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(423, 493);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Chat";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.label16.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label16.Location = new System.Drawing.Point(179, 427);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(150, 31);
+            this.label16.TabIndex = 37;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label10.Location = new System.Drawing.Point(175, 334);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 31);
+            this.label10.TabIndex = 37;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label17.Location = new System.Drawing.Point(96, 427);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 31);
+            this.label17.TabIndex = 36;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label7.Location = new System.Drawing.Point(175, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 31);
+            this.label7.TabIndex = 37;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label18.Location = new System.Drawing.Point(96, 389);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(233, 27);
+            this.label18.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label11.Location = new System.Drawing.Point(92, 334);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 31);
+            this.label11.TabIndex = 36;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(13, 389);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox6.TabIndex = 34;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label4.Location = new System.Drawing.Point(177, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 31);
+            this.label4.TabIndex = 43;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button5.Location = new System.Drawing.Point(335, 389);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 71);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Info";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label12.Location = new System.Drawing.Point(92, 296);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(233, 27);
+            this.label12.TabIndex = 35;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.Info;
+            this.panel6.Location = new System.Drawing.Point(8, 378);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(412, 87);
+            this.panel6.TabIndex = 38;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label8.Location = new System.Drawing.Point(92, 241);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 31);
+            this.label8.TabIndex = 36;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(9, 296);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label5.Location = new System.Drawing.Point(94, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 31);
+            this.label5.TabIndex = 42;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button3.Location = new System.Drawing.Point(331, 296);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 71);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Info";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(92, 203);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(233, 27);
+            this.label9.TabIndex = 35;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.Info;
+            this.panel5.Location = new System.Drawing.Point(4, 285);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(412, 87);
+            this.panel5.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label6.Location = new System.Drawing.Point(94, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(233, 27);
+            this.label6.TabIndex = 41;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(9, 203);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(11, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button2.Location = new System.Drawing.Point(331, 203);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 71);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Info";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button1.Location = new System.Drawing.Point(333, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 71);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Info";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Info;
+            this.panel4.Location = new System.Drawing.Point(4, 192);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(412, 87);
+            this.panel4.TabIndex = 38;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Info;
+            this.panel3.Location = new System.Drawing.Point(6, 99);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(412, 87);
+            this.panel3.TabIndex = 44;
             // 
             // label13
             // 
@@ -301,205 +542,15 @@
             this.panel2.Size = new System.Drawing.Size(412, 87);
             this.panel2.TabIndex = 38;
             // 
-            // label4
+            // tabPage4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(177, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 31);
-            this.label4.TabIndex = 43;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(94, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 31);
-            this.label5.TabIndex = 42;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(94, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 27);
-            this.label6.TabIndex = 41;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(11, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox2.TabIndex = 40;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button1.Location = new System.Drawing.Point(333, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 71);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Info";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Info;
-            this.panel3.Location = new System.Drawing.Point(6, 99);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(412, 87);
-            this.panel3.TabIndex = 44;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(175, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 31);
-            this.label7.TabIndex = 37;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(92, 241);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 31);
-            this.label8.TabIndex = 36;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(92, 203);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(233, 27);
-            this.label9.TabIndex = 35;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(9, 203);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button2.Location = new System.Drawing.Point(331, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 71);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Info";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Info;
-            this.panel4.Location = new System.Drawing.Point(4, 192);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(412, 87);
-            this.panel4.TabIndex = 38;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label10.Location = new System.Drawing.Point(175, 334);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 31);
-            this.label10.TabIndex = 37;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label11.Location = new System.Drawing.Point(92, 334);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 31);
-            this.label11.TabIndex = 36;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label12.Location = new System.Drawing.Point(92, 296);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(233, 27);
-            this.label12.TabIndex = 35;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(9, 296);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button3.Location = new System.Drawing.Point(331, 296);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 71);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Info";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Info;
-            this.panel5.Location = new System.Drawing.Point(4, 285);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(412, 87);
-            this.panel5.TabIndex = 38;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label16.Location = new System.Drawing.Point(179, 427);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(150, 31);
-            this.label16.TabIndex = 37;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label17.Location = new System.Drawing.Point(96, 427);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 31);
-            this.label17.TabIndex = 36;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label18.Location = new System.Drawing.Point(96, 389);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(233, 27);
-            this.label18.TabIndex = 35;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(13, 389);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox6.TabIndex = 34;
-            this.pictureBox6.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button5.Location = new System.Drawing.Point(335, 389);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 71);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Info";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Info;
-            this.panel6.Location = new System.Drawing.Point(8, 378);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(412, 87);
-            this.panel6.TabIndex = 38;
+            this.tabPage4.Location = new System.Drawing.Point(4, 28);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(423, 493);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Chat";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // VentanaVeterinario
             // 
@@ -515,12 +566,13 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -537,10 +589,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Apellidos;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Noticia1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label17;
@@ -571,5 +619,14 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Buscar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox BuscaId;
     }
 }

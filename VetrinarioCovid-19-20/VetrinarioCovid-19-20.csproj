@@ -73,6 +73,24 @@
   <ItemGroup>
     <Compile Include="Consultas.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="LoginVeterinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginVeterinario.Designer.cs">
+      <DependentUpon>LoginVeterinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroVeterinarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVeterinarios.Designer.cs">
+      <DependentUpon>RegistroVeterinarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroMascota.Designer.cs">
+      <DependentUpon>RegistroMascota.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +103,11 @@
     <Compile Include="VentanaPrincipal.Designer.cs">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro.cs">
+    <Compile Include="RegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro.Designer.cs">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaLogin.cs">
       <SubType>Form</SubType>
@@ -99,8 +117,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Registro.resx">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <EmbeddedResource Include="LoginVeterinario.resx">
+      <DependentUpon>LoginVeterinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroVeterinarios.resx">
+      <DependentUpon>RegistroVeterinarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroMascota.resx">
+      <DependentUpon>RegistroMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

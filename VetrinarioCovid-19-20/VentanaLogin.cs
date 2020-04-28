@@ -9,13 +9,16 @@ namespace VetrinarioCovid_19_20
         /// Conexión con la base de datos ElSauce
         /// </summary>
         Conexion miConexion = new Conexion();
-        Registro miRegistro = new Registro();
+        RegistroClientes miRegistro = new RegistroClientes();
+        RegistroVeterinarios otroRegistro = new RegistroVeterinarios();
+        LoginVeterinario LoginVeterinario = new LoginVeterinario();
 
         public VentanaLogin()
         {
             InitializeComponent();
         }
 
+        //Boton para iniciar como Usuario
         private void login_Click(object sender, EventArgs e)
         {
             if (miConexion.loginClientes(user.Text, pass.Text))
@@ -34,6 +37,35 @@ namespace VetrinarioCovid_19_20
         {
             this.Hide();
             miRegistro.Show();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            otroRegistro.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginVeterinario.Show();
+        }
+
+        private void VentanaLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        System.Environment.Exit(1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (miConexion.loginVeterinarios(user.Text, pass.Text))
+            {
+                this.Hide();
+                VentanaVeterinario Y = new VentanaVeterinario();
+                Y.Show();
+            }
+            else
+            {
+                MessageBox.Show("usuario o contraseña incorrrectos");
+            }
         }
     }
 }

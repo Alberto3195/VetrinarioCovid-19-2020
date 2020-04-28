@@ -1,6 +1,6 @@
 ﻿namespace VetrinarioCovid_19_20
 {
-    partial class Registro
+    partial class RegistroClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,6 @@
             this.Dirección = new System.Windows.Forms.TextBox();
             this.Contraseña = new System.Windows.Forms.TextBox();
             this.Usuario = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -176,20 +175,9 @@
             this.Usuario.Size = new System.Drawing.Size(242, 22);
             this.Usuario.TabIndex = 18;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cliente",
-            "Trabajador"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 304);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 24);
-            this.comboBox1.TabIndex = 19;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(199, 376);
+            this.button1.Location = new System.Drawing.Point(200, 295);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 48);
             this.button1.TabIndex = 20;
@@ -197,13 +185,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Registro
+            // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 464);
+            this.ClientSize = new System.Drawing.Size(543, 360);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.Dirección);
@@ -220,8 +207,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Registro";
-            this.Text = "Form1";
+            this.Name = "RegistroClientes";
+            this.Text = "Registro Clientes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registro_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +232,6 @@
         private System.Windows.Forms.TextBox Dirección;
         private System.Windows.Forms.TextBox Contraseña;
         private System.Windows.Forms.TextBox Usuario;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
     }
 }

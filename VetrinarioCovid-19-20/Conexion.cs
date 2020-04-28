@@ -8,7 +8,7 @@ namespace VetrinarioCovid_19_20
         /// <summary>
         /// Variable de tipo MySqlConnection, que nos permitira gestionar la conexion a la BBDD
         /// </summary>
-        public MySqlConnection conexion;
+        public MySqlConnection mysqlconnection;
 
         /// <summary>
         /// String que define la cadena de conexion a nuestra base de datos
@@ -20,9 +20,9 @@ namespace VetrinarioCovid_19_20
         /// Constructor de la clase, cuando instancio un objeto de tipo conexion, por defecto se ejecuta este metodo
         /// Metodo Conexion, devuelve la variable conexion con los parametros establecidos
         /// </summary>
-        public Conexion() //Para conectarse a la bbdd que tenengo en la maquina virtual
+        public Conexion() //Para conectarse a la bbdd
         {
-            conexion = new MySqlConnection(conexionSQL);
+            mysqlconnection = new MySqlConnection(conexionSQL);
         }
 
         /// <summary>
@@ -32,14 +32,14 @@ namespace VetrinarioCovid_19_20
         {
             try
             {
-                conexion.Open();
+                mysqlconnection.Open();
                 ///<summary>
                 ///Se parametrizan los datos para evitar que aquellos maleantes 
                 ///puedan acceder a nuestros datos
                 /// </summary>
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM clientes " +
-                                     "where Usuario = @Usuario", 
-                                     conexion);
+                                     "where Usuario = @Usuario",
+                                     mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@Usuario", Usuario);
 
@@ -54,12 +54,13 @@ namespace VetrinarioCovid_19_20
                     }
                     return false;
                 }
-                conexion.Close();
+                mysqlconnection.Close();
                 return false;
             }
             
-            catch (MySqlException e)
+            catch (MySqlException exception)
             {
+                Console.WriteLine(exception.Message);
                 return false;
             }
 
@@ -71,14 +72,14 @@ namespace VetrinarioCovid_19_20
         {
             try
             {
-                conexion.Open();
+                mysqlconnection.Open();
                 ///<summary>
                 ///Se parametrizan los datos para evitar que aquellos maleantes 
                 ///puedan acceder a nuestros datos
                 /// </summary>
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM veterinarios " +
                                      "where Usuario = @Usuario",
-                                     conexion);
+                                     mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@Usuario", Usuario);
 
@@ -93,12 +94,13 @@ namespace VetrinarioCovid_19_20
                     }
                     return false;
                 }
-                conexion.Close();
+                mysqlconnection.Close();
                 return false;
             }
 
-            catch (MySqlException e)
+            catch (MySqlException exception)
             {
+                Console.WriteLine(exception.Message);
                 return false;
             }
 
@@ -111,13 +113,13 @@ namespace VetrinarioCovid_19_20
         {
             try
             {
-                conexion.Open();
+                mysqlconnection.Open();
                 MySqlCommand consulta =
                     new MySqlCommand("INSERT INTO clientes " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
                                      "Dirección, Teléfono, Usuario, Contraseña) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", conexion);
+                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", mysqlconnection);
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
@@ -129,11 +131,12 @@ namespace VetrinarioCovid_19_20
 
                 consulta.ExecuteNonQuery();
 
-                conexion.Close();
+                mysqlconnection.Close();
                 return "Registro realizado con éxito";
             }
             catch (MySqlException e)
             {
+                Console.WriteLine(e.Message);
                 return "No se ha podido realizar el registro";
             }
         }
@@ -145,13 +148,13 @@ namespace VetrinarioCovid_19_20
         {
             try
             {
-                conexion.Open();
+                mysqlconnection.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO veterinairos " +
+                    new MySqlCommand("INSERT INTO veterinarios " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
                                      "Dirección, Teléfono, Usuario, Contraseña) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", conexion);
+                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", mysqlconnection);
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
@@ -163,13 +166,51 @@ namespace VetrinarioCovid_19_20
 
                 consulta.ExecuteNonQuery();
 
-                conexion.Close();
+                mysqlconnection.Close();
                 return "Registro realizado con éxito";
             }
             catch (MySqlException e)
             {
+                Console.WriteLine(e.Message);
                 return "No se ha podido realizar el registro";
             }
+        }
+
+        /// <summary>
+        /// Metodo animal. Inserta un nuevo animal en la base de datos.
+        /// Devolverá "Registro realizado correctamente" si todo sale bien
+        /// Devolverá "No se ha podido realizar el registro" y la excepcion por consola si falla
+        /// </summary>
+        /// <param name="Nombre">Nombre del animal</param>
+        /// <param name="Tipo">Tipo del animal (perro, gato, caballo...)</param>
+        /// <param name="Raza">Raza del animal (chihuaha, persa, boxer...)</param>
+        /// <param name="Fecha_Nac">Fecha de Naciemiento del animal</param>
+        /// <returns>Devuelve un mensaje en funcion del resultado. Si inserta, OK, Si no, mensaje de fallo</returns>
+        public String RegistaMascota(String ID, String Nombre, String Tipo, String Raza)
+        {
+            String resultado = "";
+            try
+            {
+                mysqlconnection.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("INSERT INTO animal VALUES (@ID, @Nombre, @Tipo, @Raza)", mysqlconnection);
+
+                consulta.Parameters.AddWithValue("@ID", ID);
+                consulta.Parameters.AddWithValue("@Nombre", Nombre);
+                consulta.Parameters.AddWithValue("@Tipo", Tipo);
+                consulta.Parameters.AddWithValue("@Raza", Raza);
+
+                consulta.ExecuteNonQuery();
+
+                mysqlconnection.Close();
+                resultado = "Registro realizado con éxito";               
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+                resultado = "No se ha podido realizar el registro";
+            }
+            return resultado;
         }
     }
 }
