@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.Usuario = new System.Windows.Forms.TextBox();
-            this.Contraseña = new System.Windows.Forms.TextBox();
+            this.Pass = new System.Windows.Forms.TextBox();
             this.Dirección = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
             this.DNI = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -57,19 +55,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Usuario
+            // Pass
             // 
-            this.Usuario.Location = new System.Drawing.Point(8, 255);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(242, 22);
-            this.Usuario.TabIndex = 36;
-            // 
-            // Contraseña
-            // 
-            this.Contraseña.Location = new System.Drawing.Point(279, 255);
-            this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Size = new System.Drawing.Size(242, 22);
-            this.Contraseña.TabIndex = 35;
+            this.Pass.Location = new System.Drawing.Point(145, 252);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(242, 22);
+            this.Pass.TabIndex = 35;
             // 
             // Dirección
             // 
@@ -151,21 +142,12 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(287, 229);
+            this.label4.Location = new System.Drawing.Point(153, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 24;
             this.label4.Text = "Contraseña";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(8, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 23);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Nombre Usuario";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -191,8 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 359);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Usuario);
-            this.Controls.Add(this.Contraseña);
+            this.Controls.Add(this.Pass);
             this.Controls.Add(this.Dirección);
             this.Controls.Add(this.Correo);
             this.Controls.Add(this.DNI);
@@ -204,7 +185,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegistroVeterinarios";
@@ -218,8 +198,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox Usuario;
-        private System.Windows.Forms.TextBox Contraseña;
+        private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.TextBox Dirección;
         private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.TextBox DNI;
@@ -231,7 +210,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

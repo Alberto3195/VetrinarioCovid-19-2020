@@ -31,9 +31,9 @@
             this.Nombre = new System.Windows.Forms.Label();
             this.Raza = new System.Windows.Forms.Label();
             this.Tipo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nom = new System.Windows.Forms.TextBox();
+            this.tip = new System.Windows.Forms.TextBox();
+            this.raz = new System.Windows.Forms.TextBox();
             this.Registrar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,26 +63,26 @@
             this.Tipo.TabIndex = 3;
             this.Tipo.Text = "Tipo";
             // 
-            // textBox1
+            // nom
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 22);
-            this.textBox1.TabIndex = 4;
+            this.nom.Location = new System.Drawing.Point(120, 87);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(186, 22);
+            this.nom.TabIndex = 4;
             // 
-            // textBox2
+            // tip
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 22);
-            this.textBox2.TabIndex = 5;
+            this.tip.Location = new System.Drawing.Point(120, 129);
+            this.tip.Name = "tip";
+            this.tip.Size = new System.Drawing.Size(186, 22);
+            this.tip.TabIndex = 5;
             // 
-            // textBox3
+            // raz
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 22);
-            this.textBox3.TabIndex = 6;
+            this.raz.Location = new System.Drawing.Point(120, 184);
+            this.raz.Name = "raz";
+            this.raz.Size = new System.Drawing.Size(186, 22);
+            this.raz.TabIndex = 6;
             // 
             // Registrar
             // 
@@ -117,9 +117,9 @@
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Registrar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.raz);
+            this.Controls.Add(this.tip);
+            this.Controls.Add(this.nom);
             this.Controls.Add(this.Tipo);
             this.Controls.Add(this.Raza);
             this.Controls.Add(this.Nombre);
@@ -136,9 +136,9 @@
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Label Raza;
         private System.Windows.Forms.Label Tipo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox nom;
+        private System.Windows.Forms.TextBox tip;
+        private System.Windows.Forms.TextBox raz;
         private System.Windows.Forms.Button Registrar;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;

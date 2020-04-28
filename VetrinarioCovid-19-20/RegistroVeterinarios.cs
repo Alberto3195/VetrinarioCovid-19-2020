@@ -20,7 +20,7 @@ namespace VetrinarioCovid_19_20
 
             MessageBox.Show(conexion.insertaVeterinario(Nombre.Text, Apellidos.Text, DNI.Text,
                                     Correo.Text, Dirección.Text, Teléfono.Text,
-                                    Usuario.Text, Contraseña.Text));
+                                    Pass.Text));
             this.Close();
             login.Show();
         }

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 
 namespace VetrinarioCovid_19_20 
 {
@@ -14,7 +15,7 @@ namespace VetrinarioCovid_19_20
         /// String que define la cadena de conexion a nuestra base de datos
         /// Debemos especificar Server; Database; Uid; Pwd; Port;
         /// </summary>
-        string conexionSQL = "Server = 127.0.0.1; Database = veterinaria; Uid = root; Pwd = ; Port = 3306";
+        string conexionSQL = "Server = 127.0.0.1; Database = veterinario; Uid = root; Pwd = ; Port = 3306";
 
         /// <summary>
         /// Constructor de la clase, cuando instancio un objeto de tipo conexion, por defecto se ejecuta este metodo
@@ -28,7 +29,7 @@ namespace VetrinarioCovid_19_20
         /// <summary>
         /// Método que nos ingresa en la cuenta de cada cliente
         /// </summary>
-        public Boolean loginClientes(string Usuario, string Contraseña)
+        public Boolean loginClientes(string DNI, string Pass)
         {
             try
             {
@@ -38,17 +39,17 @@ namespace VetrinarioCovid_19_20
                 ///puedan acceder a nuestros datos
                 /// </summary>
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM clientes " +
-                                     "where Usuario = @Usuario",
+                                     "where DNI = @DNI",
                                      mysqlconnection);
 
-                consulta.Parameters.AddWithValue("@Usuario", Usuario);
+                consulta.Parameters.AddWithValue("@DNI", DNI);
 
                 MySqlDataReader resultado = consulta.ExecuteReader();
 
                 if (resultado.Read())
                 {
                     string contraseña = resultado.GetString("Contraseña");
-                    if (BCrypt.Net.BCrypt.Verify(Contraseña, contraseña))
+                    if (BCrypt.Net.BCrypt.Verify(Pass, Pass))
                     {
                         return true;
                     }
@@ -63,12 +64,12 @@ namespace VetrinarioCovid_19_20
                 Console.WriteLine(exception.Message);
                 return false;
             }
-
     }
+
         /// <summary>
         /// Método que nos ingresará dentro de nuestro programa como Veterinarios
-        /// </summary>
-        public Boolean loginVeterinarios(string Usuario, string Contraseña)
+        /// </summary>DNI
+        public Boolean loginVeterinarios(string DNI, string Pass)
         {
             try
             {
@@ -78,17 +79,17 @@ namespace VetrinarioCovid_19_20
                 ///puedan acceder a nuestros datos
                 /// </summary>
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM veterinarios " +
-                                     "where Usuario = @Usuario",
+                                     "where DNI = @DNI",
                                      mysqlconnection);
 
-                consulta.Parameters.AddWithValue("@Usuario", Usuario);
+                consulta.Parameters.AddWithValue("@DNI", DNI);
 
                 MySqlDataReader resultado = consulta.ExecuteReader();
 
                 if (resultado.Read())
                 {
                     string contraseña = resultado.GetString("Contraseña");
-                    if (BCrypt.Net.BCrypt.Verify(Contraseña, contraseña))
+                    if (BCrypt.Net.BCrypt.Verify(Pass, Pass))
                     {
                         return true;
                     }
@@ -116,13 +117,12 @@ namespace VetrinarioCovid_19_20
         /// <param name="Correo"></param>
         /// <param name="Dirección"></param>
         /// <param name="Teléfono"></param>
-        /// <param name="Usuario"></param>
-        /// <param name="Contraseña"></param>
+        /// <param name="Pass"></param>
         /// <returns></returns>
         public String insertaUsuario (String Nombre, String Apellidos,
                                        String DNI, String Correo,
                                        String Dirección, String Teléfono,
-                                       String Usuario, String Contraseña)
+                                       String Pass)
         {
             try
             {
@@ -130,17 +130,17 @@ namespace VetrinarioCovid_19_20
                 MySqlCommand consulta =
                     new MySqlCommand("INSERT INTO clientes " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
-                                     "Dirección, Teléfono, Usuario, Contraseña) " +
+                                     "Dirección, Teléfono, Pass) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", mysqlconnection);
+                                     "@Dirección, @Teléfono, @Pass)", mysqlconnection);
+
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
                 consulta.Parameters.AddWithValue("@Correo", Correo);
                 consulta.Parameters.AddWithValue("@Dirección", Dirección);
                 consulta.Parameters.AddWithValue("@Teléfono", Teléfono);
-                consulta.Parameters.AddWithValue("@Usuario", Usuario);
-                consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
+                consulta.Parameters.AddWithValue("@Pass", Pass);
 
                 consulta.ExecuteNonQuery();
 
@@ -171,7 +171,7 @@ namespace VetrinarioCovid_19_20
         public String insertaVeterinario(String Nombre, String Apellidos,
                                        String DNI, String Correo,
                                        String Dirección, String Teléfono,
-                                       String Usuario, String Contraseña)
+                                       String Contraseña)
         {
             try
             {
@@ -179,16 +179,16 @@ namespace VetrinarioCovid_19_20
                 MySqlCommand consulta =
                     new MySqlCommand("INSERT INTO veterinarios " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
-                                     "Dirección, Teléfono, Usuario, Contraseña) " +
+                                     "Dirección, Teléfono, Contraseña) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Dirección, @Teléfono, @Usuario, @Contraseña)", mysqlconnection);
+                                     "@Dirección, @Teléfono, @Contraseña)", mysqlconnection);
+
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
                 consulta.Parameters.AddWithValue("@Correo", Correo);
                 consulta.Parameters.AddWithValue("@Dirección", Dirección);
                 consulta.Parameters.AddWithValue("@Teléfono", Teléfono);
-                consulta.Parameters.AddWithValue("@Usuario", Usuario);
                 consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
 
                 consulta.ExecuteNonQuery();
@@ -220,7 +220,8 @@ namespace VetrinarioCovid_19_20
             {
                 mysqlconnection.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO animal (ID, Nombre, Tipo, Raza) VALUES (@ID, @Nombre, @Tipo, @Raza)", mysqlconnection);
+                    new MySqlCommand("INSERT INTO animal (ID, Nombre, Tipo, Raza) " +
+                                     "VALUES (@ID, @Nombre, @Tipo, @Raza)", mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@ID", ID);
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
@@ -238,6 +239,26 @@ namespace VetrinarioCovid_19_20
                 resultado = "No se ha podido realizar el registro";
             }
             return resultado;
+        }
+
+        public DataTable buscaMascota (String ID)
+        {
+            try
+            {
+                mysqlconnection.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM animal " +
+                                                         "WHERE ID ='" + ID + "'", mysqlconnection);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable mascota = new DataTable();
+                mascota.Load(resultado);
+                mysqlconnection.Close();
+                return mascota;
+
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,8 +41,7 @@
             this.DNI = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
             this.Dirección = new System.Windows.Forms.TextBox();
-            this.Contraseña = new System.Windows.Forms.TextBox();
-            this.Usuario = new System.Windows.Forms.TextBox();
+            this.Pass = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,18 +63,9 @@
             this.label2.Text = "DNI";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(12, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nombre Usuario";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(291, 227);
+            this.label4.Location = new System.Drawing.Point(157, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 4;
@@ -161,19 +150,12 @@
             this.Dirección.Size = new System.Drawing.Size(242, 22);
             this.Dirección.TabIndex = 16;
             // 
-            // Contraseña
+            // Pass
             // 
-            this.Contraseña.Location = new System.Drawing.Point(283, 253);
-            this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Size = new System.Drawing.Size(242, 22);
-            this.Contraseña.TabIndex = 17;
-            // 
-            // Usuario
-            // 
-            this.Usuario.Location = new System.Drawing.Point(12, 253);
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(242, 22);
-            this.Usuario.TabIndex = 18;
+            this.Pass.Location = new System.Drawing.Point(149, 244);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(242, 22);
+            this.Pass.TabIndex = 17;
             // 
             // button1
             // 
@@ -191,8 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 360);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Usuario);
-            this.Controls.Add(this.Contraseña);
+            this.Controls.Add(this.Pass);
             this.Controls.Add(this.Dirección);
             this.Controls.Add(this.Correo);
             this.Controls.Add(this.DNI);
@@ -204,7 +185,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegistroClientes";
@@ -218,7 +198,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -230,8 +209,7 @@
         private System.Windows.Forms.TextBox DNI;
         private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.TextBox Dirección;
-        private System.Windows.Forms.TextBox Contraseña;
-        private System.Windows.Forms.TextBox Usuario;
+        private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.Button button1;
     }
 }

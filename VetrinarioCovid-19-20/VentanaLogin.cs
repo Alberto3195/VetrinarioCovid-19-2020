@@ -32,6 +32,7 @@ namespace VetrinarioCovid_19_20
             }
         }
 
+        //Boton para iniciar como veterinario
         private void login2_Click(object sender, EventArgs e)
         {
             if (miConexion.loginVeterinarios(user.Text, pass.Text))
@@ -39,8 +40,6 @@ namespace VetrinarioCovid_19_20
                 this.Hide();
                 VentanaVeterinario Y = new VentanaVeterinario();
                 Y.Show();
-                //VentanaVeterinario VentranaV = new VentanaVeterinario();
-                //VentranaV.Show();
             }
             else
             {

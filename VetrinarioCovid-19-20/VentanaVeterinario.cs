@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data;
 
 namespace VetrinarioCovid_19_20
 {
     public partial class VentanaVeterinario : Form
     {
         //Declaramos la clase donde se realiza la consulta
-        //Conexion conexion = new Conexion();
+        Conexion conexion = new Conexion();
+
         //Indicamos la ventana donde se van a localizar los datos
         //VentanaVeterinario V = new VentanaVeterinario();
+
+        //Crear una variable que guarde los datos
+        public DataTable datosMascotas = new DataTable();
 
         public VentanaVeterinario()
         {
@@ -17,16 +22,35 @@ namespace VetrinarioCovid_19_20
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    int.Parse(BuscaId.Text);
-            //    BuscaId.Text = "";//Dejamos el buscador de ID vacío
-            //}
-            //catch (Exception ex)
-            //{//Si el id no es valido salta un aviso
-            //    MessageBox.Show("ID no encontrado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    BuscaId.Text = "";
-            //}
+            id.Text = "";
+            nom.Text = "";
+            tip.Text = "";
+            raz.Text = "";
+            sex.Text = "";
+            info.Text = "";
+            propietario.Text = "";
+
+            try
+            {
+                datosMascotas = conexion.buscaMascota(BuscaId.Text);
+
+                //Seleccionamos los datos y los labels donde aparecerán dentro de nuestra app
+                id.Text = (id.Text = datosMascotas.Rows[0]["ID"].ToString());
+                nom.Text = (nom.Text = datosMascotas.Rows[0]["Nombre"].ToString());
+                tip.Text = (tip.Text = datosMascotas.Rows[0]["Tipo"].ToString());
+                raz.Text = (raz.Text = datosMascotas.Rows[0]["Raza"].ToString());
+                info.Text = (info.Text = datosMascotas.Rows[0]["Historial Médico"].ToString());
+                sex.Text = (sex.Text = datosMascotas.Rows[0]["Sexo"].ToString());
+                propietario.Text = (propietario.Text = datosMascotas.Rows[0]["Propietario"].ToString());
+
+                BuscaId.Text = "";//Dejamos el buscador de ID vacío
+            }
+            catch (Exception ex)
+            //Si el id no es valido salta un aviso
+            {
+                MessageBox.Show("ID no encontrado");
+                BuscaId.Text = "";
+            }
         }
 
         private void VentanaVeterinario_FormClosed(object sender, FormClosedEventArgs e)
