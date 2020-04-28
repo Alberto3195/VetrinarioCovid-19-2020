@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.Nombre = new System.Windows.Forms.Label();
-            this.Fecha_Nac = new System.Windows.Forms.Label();
             this.Raza = new System.Windows.Forms.Label();
             this.Tipo = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.Registrar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,14 +46,6 @@
             this.Nombre.Size = new System.Drawing.Size(100, 23);
             this.Nombre.TabIndex = 0;
             this.Nombre.Text = "Nombre";
-            // 
-            // Fecha_Nac
-            // 
-            this.Fecha_Nac.Location = new System.Drawing.Point(13, 241);
-            this.Fecha_Nac.Name = "Fecha_Nac";
-            this.Fecha_Nac.Size = new System.Drawing.Size(100, 23);
-            this.Fecha_Nac.TabIndex = 1;
-            this.Fecha_Nac.Text = "Fecha_Nac";
             // 
             // Raza
             // 
@@ -94,16 +84,9 @@
             this.textBox3.Size = new System.Drawing.Size(186, 22);
             this.textBox3.TabIndex = 6;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(120, 242);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(186, 22);
-            this.textBox4.TabIndex = 7;
-            // 
             // Registrar
             // 
-            this.Registrar.Location = new System.Drawing.Point(98, 338);
+            this.Registrar.Location = new System.Drawing.Point(98, 234);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(121, 47);
             this.Registrar.TabIndex = 8;
@@ -130,17 +113,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 397);
+            this.ClientSize = new System.Drawing.Size(318, 299);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Registrar);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Tipo);
             this.Controls.Add(this.Raza);
-            this.Controls.Add(this.Fecha_Nac);
             this.Controls.Add(this.Nombre);
             this.Name = "RegistroMascota";
             this.Text = "Registre su mascota";
@@ -153,13 +134,11 @@
         #endregion
 
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.Label Fecha_Nac;
         private System.Windows.Forms.Label Raza;
         private System.Windows.Forms.Label Tipo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button Registrar;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;

@@ -106,6 +106,19 @@ namespace VetrinarioCovid_19_20
 
         }
 
+        /// <summary>
+        /// InsertaUsuario inserta un nuevo usuario del 
+        /// veterinario en la base de datos 
+        /// </summary>
+        /// <param name="Nombre"></param>
+        /// <param name="Apellidos"></param>
+        /// <param name="DNI"></param>
+        /// <param name="Correo"></param>
+        /// <param name="Dirección"></param>
+        /// <param name="Teléfono"></param>
+        /// <param name="Usuario"></param>
+        /// <param name="Contraseña"></param>
+        /// <returns></returns>
         public String insertaUsuario (String Nombre, String Apellidos,
                                        String DNI, String Correo,
                                        String Dirección, String Teléfono,
@@ -140,6 +153,20 @@ namespace VetrinarioCovid_19_20
                 return "No se ha podido realizar el registro";
             }
         }
+
+        /// <summary>
+        /// InsertaVeterinario inserta un veterinario (trabajador) dentro de 
+        /// la base de datos creada
+        /// </summary>
+        /// <param name="Nombre"></param>
+        /// <param name="Apellidos"></param>
+        /// <param name="DNI"></param>
+        /// <param name="Correo"></param>
+        /// <param name="Dirección"></param>
+        /// <param name="Teléfono"></param>
+        /// <param name="Usuario"></param>
+        /// <param name="Contraseña"></param>
+        /// <returns></returns>
 
         public String insertaVeterinario(String Nombre, String Apellidos,
                                        String DNI, String Correo,
@@ -181,10 +208,10 @@ namespace VetrinarioCovid_19_20
         /// Devolverá "Registro realizado correctamente" si todo sale bien
         /// Devolverá "No se ha podido realizar el registro" y la excepcion por consola si falla
         /// </summary>
+        /// <param name="ID">ID del animal</param>
         /// <param name="Nombre">Nombre del animal</param>
         /// <param name="Tipo">Tipo del animal (perro, gato, caballo...)</param>
         /// <param name="Raza">Raza del animal (chihuaha, persa, boxer...)</param>
-        /// <param name="Fecha_Nac">Fecha de Naciemiento del animal</param>
         /// <returns>Devuelve un mensaje en funcion del resultado. Si inserta, OK, Si no, mensaje de fallo</returns>
         public String RegistaMascota(String ID, String Nombre, String Tipo, String Raza)
         {
@@ -193,7 +220,7 @@ namespace VetrinarioCovid_19_20
             {
                 mysqlconnection.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO animal VALUES (@ID, @Nombre, @Tipo, @Raza)", mysqlconnection);
+                    new MySqlCommand("INSERT INTO animal (ID, Nombre, Tipo, Raza) VALUES (@ID, @Nombre, @Tipo, @Raza)", mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@ID", ID);
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
