@@ -561,6 +561,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VentanaVeterinario";
             this.Text = "Veterinario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaVeterinario_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

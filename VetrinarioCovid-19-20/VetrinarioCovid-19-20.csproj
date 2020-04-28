@@ -73,12 +73,6 @@
   <ItemGroup>
     <Compile Include="Consultas.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="LoginVeterinario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginVeterinario.Designer.cs">
-      <DependentUpon>LoginVeterinario.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistroVeterinarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginVeterinario.resx">
-      <DependentUpon>LoginVeterinario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RegistroVeterinarios.resx">
       <DependentUpon>RegistroVeterinarios.cs</DependentUpon>
     </EmbeddedResource>

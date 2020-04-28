@@ -37,9 +37,8 @@
             this.login = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.registro = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.login2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -91,9 +90,9 @@
             this.login.Location = new System.Drawing.Point(12, 250);
             this.login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(93, 30);
+            this.login.Size = new System.Drawing.Size(93, 51);
             this.login.TabIndex = 5;
-            this.login.Text = "Login";
+            this.login.Text = "Login Usuario";
             this.login.UseVisualStyleBackColor = true;
             this.login.Click += new System.EventHandler(this.login_Click);
             // 
@@ -109,7 +108,7 @@
             // 
             // registro
             // 
-            this.registro.Location = new System.Drawing.Point(53, 305);
+            this.registro.Location = new System.Drawing.Point(62, 335);
             this.registro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.registro.Name = "registro";
             this.registro.Size = new System.Drawing.Size(221, 47);
@@ -118,20 +117,9 @@
             this.registro.UseVisualStyleBackColor = true;
             this.registro.Click += new System.EventHandler(this.registro_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(53, 411);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 55);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Ingresar como Veterinario";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(53, 356);
+            this.button2.Location = new System.Drawing.Point(62, 386);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(221, 51);
@@ -140,25 +128,24 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // login2
             // 
-            this.button3.Location = new System.Drawing.Point(127, 250);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 30);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Login";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.login2.Location = new System.Drawing.Point(127, 250);
+            this.login2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.login2.Name = "login2";
+            this.login2.Size = new System.Drawing.Size(93, 51);
+            this.login2.TabIndex = 10;
+            this.login2.Text = "Login Veterinario";
+            this.login2.UseVisualStyleBackColor = true;
+            this.login2.Click += new System.EventHandler(this.login2_Click);
             // 
             // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 558);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.login2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.registro);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.login);
@@ -191,8 +178,7 @@
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button registro;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button login2;
     }
 }

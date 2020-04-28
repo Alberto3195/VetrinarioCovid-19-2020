@@ -11,7 +11,6 @@ namespace VetrinarioCovid_19_20
         Conexion miConexion = new Conexion();
         RegistroClientes miRegistro = new RegistroClientes();
         RegistroVeterinarios otroRegistro = new RegistroVeterinarios();
-        LoginVeterinario LoginVeterinario = new LoginVeterinario();
 
         public VentanaLogin()
         {
@@ -33,6 +32,22 @@ namespace VetrinarioCovid_19_20
             }
         }
 
+        private void login2_Click(object sender, EventArgs e)
+        {
+            if (miConexion.loginVeterinarios(user.Text, pass.Text))
+            {
+                this.Hide();
+                VentanaVeterinario Y = new VentanaVeterinario();
+                Y.Show();
+                //VentanaVeterinario VentranaV = new VentanaVeterinario();
+                //VentranaV.Show();
+            }
+            else
+            {
+                MessageBox.Show("usuario o contraseña incorrrectos");
+            }
+        }
+
         private void registro_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -44,28 +59,9 @@ namespace VetrinarioCovid_19_20
             otroRegistro.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            LoginVeterinario.Show();
-        }
-
         private void VentanaLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
         System.Environment.Exit(1);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (miConexion.loginVeterinarios(user.Text, pass.Text))
-            {
-                this.Hide();
-                VentanaVeterinario Y = new VentanaVeterinario();
-                Y.Show();
-            }
-            else
-            {
-                MessageBox.Show("usuario o contraseña incorrrectos");
-            }
         }
     }
 }
