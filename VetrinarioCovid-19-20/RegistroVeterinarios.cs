@@ -15,12 +15,12 @@ namespace VetrinarioCovid_19_20
         private void button1_Click(object sender, EventArgs e)
         {
             VentanaLogin login = new VentanaLogin();
-            //String textoPassword = Contraseña.Text;
-            //string myHash = BCrypt.Net.BCrypt.HashPassword(textoPassword, BCrypt.Net.BCrypt.GenerateSalt());
+
+            String textoPassword = Pass.Text;
+            string myHash = BCrypt.Net.BCrypt.HashPassword(textoPassword, BCrypt.Net.BCrypt.GenerateSalt());
 
             MessageBox.Show(conexion.insertaVeterinario(Nombre.Text, Apellidos.Text, DNI.Text,
-                                    Correo.Text, Direccion.Text, Telefono.Text,
-                                    Pass.Text));
+                                    Correo.Text, Direccion.Text, Telefono.Text, myHash));
             this.Close();
             login.Show();
         }

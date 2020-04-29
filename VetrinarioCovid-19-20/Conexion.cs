@@ -88,8 +88,8 @@ namespace VetrinarioCovid_19_20
 
                 if (resultado.Read())
                 {
-                    string contraseña = resultado.GetString("Contraseña");
-                    if (BCrypt.Net.BCrypt.Verify(Pass, Pass))
+                    string contraseña = resultado.GetString("Pass");
+                    if (BCrypt.Net.BCrypt.Verify(Pass, contraseña))
                     {
                         return true;
                     }
@@ -162,15 +162,15 @@ namespace VetrinarioCovid_19_20
         /// <param name="Apellidos"></param>
         /// <param name="DNI"></param>
         /// <param name="Correo"></param>
-        /// <param name="Dirección"></param>
-        /// <param name="Teléfono"></param>
-        /// <param name="Contraseña"></param>
+        /// <param name="Direccion"></param>
+        /// <param name="Telefono"></param>
+        /// <param name="Pass"></param>
         /// <returns></returns>
 
         public String insertaVeterinario(String Nombre, String Apellidos,
                                        String DNI, String Correo,
-                                       String Dirección, String Teléfono,
-                                       String Contraseña)
+                                       String Direccion, String Telefono,
+                                       String Pass)
         {
             try
             {
@@ -178,17 +178,17 @@ namespace VetrinarioCovid_19_20
                 MySqlCommand consulta =
                     new MySqlCommand("INSERT INTO veterinarios " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
-                                     "Direccion, Telefono, Contraseña) " +
+                                     "Direccion, Telefono, Pass) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Direccion, @Telefono, @Contraseña)", mysqlconnection);
+                                     "@Direccion, @Telefono, @Pass)", mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
                 consulta.Parameters.AddWithValue("@Correo", Correo);
-                consulta.Parameters.AddWithValue("@Direccion", Dirección);
-                consulta.Parameters.AddWithValue("@Telfono", Teléfono);
-                consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
+                consulta.Parameters.AddWithValue("@Direccion", Direccion);
+                consulta.Parameters.AddWithValue("@Telefono", Telefono);
+                consulta.Parameters.AddWithValue("@Pass", Pass);
 
                 consulta.ExecuteNonQuery();
 
@@ -202,61 +202,57 @@ namespace VetrinarioCovid_19_20
             }
         }
 
-        /// <summary>
-        /// Metodo animal. Inserta un nuevo animal en la base de datos.
-        /// Devolverá "Registro realizado correctamente" si todo sale bien
-        /// Devolverá "No se ha podido realizar el registro" y la excepcion por consola si falla
-        /// </summary>
-        /// <param name="ID">ID del animal</param>
-        /// <param name="Nombre">Nombre del animal</param>
-        /// <param name="Tipo">Tipo del animal (perro, gato, caballo...)</param>
-        /// <param name="Raza">Raza del animal (chihuaha, persa, boxer...)</param>
-        /// <returns>Devuelve un mensaje en funcion del resultado. Si inserta, OK, Si no, mensaje de fallo</returns>
-        public String RegistaMascota(String DNI, String ID, String Nombre, String Tipo, String Raza, String Sexo)
+     public String RegistraMascota(String ID, String Nombre, String Tipo, String Raza, String Sexo, String Propietario, String Veterinario)
+    {
+        String resultado = "";
+        try
         {
-            String resultado = "";
-            try
-            {
-                mysqlconnection.Open();
-                MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO animal (DNI, ID, Nombre, Tipo, Raza, Sexo) " +
-                                     "VALUES (@DNI, @ID, @Nombre, @Tipo, @Raza, @Sexo)", mysqlconnection);
+            mysqlconnection.Open();
+            MySqlCommand consulta =
+                new MySqlCommand("INSERT INTO animales (ID, Nombre, Tipo, Raza, Sexo, Propietario, Veterinario) " +
+                                 "VALUES (@ID, @Nombre, @Tipo, @Raza, @Sexo, @Propietario, @Veterinario)", mysqlconnection);
 
-                consulta.Parameters.AddWithValue("@ID", ID);
-                consulta.Parameters.AddWithValue("@Nombre", Nombre);
-                consulta.Parameters.AddWithValue("@Tipo", Tipo);
-                consulta.Parameters.AddWithValue("@Raza", Raza);
-                consulta.Parameters.AddWithValue("@Sexo", Sexo);
-                consulta.Parameters.AddWithValue("@DNI", DNI);
-
+            consulta.Parameters.AddWithValue("@ID", ID);
+            consulta.Parameters.AddWithValue("@Nombre", Nombre);
+            consulta.Parameters.AddWithValue("@Tipo", Tipo);
+            consulta.Parameters.AddWithValue("@Raza", Raza);
+            consulta.Parameters.AddWithValue("@Sexo", Sexo);
+            consulta.Parameters.AddWithValue("@Propietario", Propietario);
+            consulta.Parameters.AddWithValue("@Veterinario", Veterinario);
+            
                 consulta.ExecuteNonQuery();
 
-                mysqlconnection.Close();
-                resultado = "Registro realizado con éxito";               
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(e.Message);
-                resultado = "No se ha podido realizar el registro";
-            }
-            return resultado;
+            mysqlconnection.Close();
+            resultado = "Registro realizado con éxito";
         }
-
-        public DataTable buscaMascota (String ID)
+        catch (MySqlException e)
         {
-            try
-            {
-                mysqlconnection.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM animal " +
-                                                         "WHERE ID ='" + ID + "'", mysqlconnection);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                DataTable mascota = new DataTable();
-                mascota.Load(resultado);
-                mysqlconnection.Close();
-                return mascota;
+            Console.WriteLine(e.Message);
+            resultado = "No se ha podido realizar el registro";
+        }
+        return resultado;
+    }
 
-            }
-            catch (MySqlException e)
+    
+    public DataTable buscaMascota(String ID)
+    {
+        try
+        {
+            mysqlconnection.Open();
+            MySqlCommand consulta = new MySqlCommand("SELECT * FROM animales " +
+                                                     "WHERE ID ='" + ID + "'", mysqlconnection);
+
+            MySqlDataReader resultado = consulta.ExecuteReader();
+            DataTable mascota = new DataTable();
+
+            mascota.Load(resultado);
+
+            mysqlconnection.Close();
+
+            return mascota;
+
+        }
+        catch (MySqlException e)
             {
                 throw e;
             }

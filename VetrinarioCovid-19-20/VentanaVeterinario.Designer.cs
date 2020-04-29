@@ -37,6 +37,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.propietario = new System.Windows.Forms.Label();
+            this.sex = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.Label();
+            this.nom = new System.Windows.Forms.Label();
+            this.tip = new System.Windows.Forms.Label();
+            this.raz = new System.Windows.Forms.Label();
+            this.historial = new System.Windows.Forms.Label();
             this.Buscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BuscaId = new System.Windows.Forms.TextBox();
@@ -72,13 +79,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.info = new System.Windows.Forms.Label();
-            this.raz = new System.Windows.Forms.Label();
-            this.tip = new System.Windows.Forms.Label();
-            this.nom = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.Label();
-            this.sex = new System.Windows.Forms.Label();
-            this.propietario = new System.Windows.Forms.Label();
+            this.veterinario = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -163,13 +164,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.veterinario);
             this.tabPage2.Controls.Add(this.propietario);
             this.tabPage2.Controls.Add(this.sex);
             this.tabPage2.Controls.Add(this.id);
             this.tabPage2.Controls.Add(this.nom);
             this.tabPage2.Controls.Add(this.tip);
             this.tabPage2.Controls.Add(this.raz);
-            this.tabPage2.Controls.Add(this.info);
+            this.tabPage2.Controls.Add(this.historial);
             this.tabPage2.Controls.Add(this.Buscar);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.BuscaId);
@@ -180,6 +182,55 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Localizador";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // propietario
+            // 
+            this.propietario.Location = new System.Drawing.Point(12, 195);
+            this.propietario.Name = "propietario";
+            this.propietario.Size = new System.Drawing.Size(212, 23);
+            this.propietario.TabIndex = 16;
+            // 
+            // sex
+            // 
+            this.sex.Location = new System.Drawing.Point(12, 161);
+            this.sex.Name = "sex";
+            this.sex.Size = new System.Drawing.Size(212, 23);
+            this.sex.TabIndex = 15;
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(6, 65);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(291, 23);
+            this.id.TabIndex = 14;
+            // 
+            // nom
+            // 
+            this.nom.Location = new System.Drawing.Point(6, 88);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(291, 23);
+            this.nom.TabIndex = 13;
+            // 
+            // tip
+            // 
+            this.tip.Location = new System.Drawing.Point(9, 111);
+            this.tip.Name = "tip";
+            this.tip.Size = new System.Drawing.Size(291, 23);
+            this.tip.TabIndex = 12;
+            // 
+            // raz
+            // 
+            this.raz.Location = new System.Drawing.Point(9, 134);
+            this.raz.Name = "raz";
+            this.raz.Size = new System.Drawing.Size(291, 23);
+            this.raz.TabIndex = 11;
+            // 
+            // historial
+            // 
+            this.historial.Location = new System.Drawing.Point(9, 271);
+            this.historial.Name = "historial";
+            this.historial.Size = new System.Drawing.Size(406, 217);
+            this.historial.TabIndex = 9;
             // 
             // Buscar
             // 
@@ -506,54 +557,12 @@
             this.tabPage4.Text = "Chat";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // info
+            // veterinario
             // 
-            this.info.Location = new System.Drawing.Point(9, 271);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(406, 217);
-            this.info.TabIndex = 9;
-            // 
-            // raz
-            // 
-            this.raz.Location = new System.Drawing.Point(9, 134);
-            this.raz.Name = "raz";
-            this.raz.Size = new System.Drawing.Size(291, 23);
-            this.raz.TabIndex = 11;
-            // 
-            // tip
-            // 
-            this.tip.Location = new System.Drawing.Point(9, 111);
-            this.tip.Name = "tip";
-            this.tip.Size = new System.Drawing.Size(291, 23);
-            this.tip.TabIndex = 12;
-            // 
-            // nom
-            // 
-            this.nom.Location = new System.Drawing.Point(6, 88);
-            this.nom.Name = "nom";
-            this.nom.Size = new System.Drawing.Size(291, 23);
-            this.nom.TabIndex = 13;
-            // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(6, 65);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(291, 23);
-            this.id.TabIndex = 14;
-            // 
-            // sex
-            // 
-            this.sex.Location = new System.Drawing.Point(12, 161);
-            this.sex.Name = "sex";
-            this.sex.Size = new System.Drawing.Size(212, 23);
-            this.sex.TabIndex = 15;
-            // 
-            // propietario
-            // 
-            this.propietario.Location = new System.Drawing.Point(12, 195);
-            this.propietario.Name = "propietario";
-            this.propietario.Size = new System.Drawing.Size(212, 23);
-            this.propietario.TabIndex = 16;
+            this.veterinario.Location = new System.Drawing.Point(6, 260);
+            this.veterinario.Name = "veterinario";
+            this.veterinario.Size = new System.Drawing.Size(212, 23);
+            this.veterinario.TabIndex = 17;
             // 
             // VentanaVeterinario
             // 
@@ -630,8 +639,9 @@
         private System.Windows.Forms.Label nom;
         private System.Windows.Forms.Label tip;
         private System.Windows.Forms.Label raz;
-        private System.Windows.Forms.Label info;
+        private System.Windows.Forms.Label historial;
         private System.Windows.Forms.Label propietario;
         private System.Windows.Forms.Label sex;
+        private System.Windows.Forms.Label veterinario;
     }
 }

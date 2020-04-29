@@ -20,6 +20,7 @@ namespace VetrinarioCovid_19_20
             InitializeComponent();
         }
 
+        
         private void Buscar_Click(object sender, EventArgs e)
         {
             id.Text = "";
@@ -27,8 +28,8 @@ namespace VetrinarioCovid_19_20
             tip.Text = "";
             raz.Text = "";
             sex.Text = "";
-            info.Text = "";
             propietario.Text = "";
+            veterinario.Text = "";
 
             try
             {
@@ -39,9 +40,9 @@ namespace VetrinarioCovid_19_20
                 nom.Text = (nom.Text = datosMascotas.Rows[0]["Nombre"].ToString());
                 tip.Text = (tip.Text = datosMascotas.Rows[0]["Tipo"].ToString());
                 raz.Text = (raz.Text = datosMascotas.Rows[0]["Raza"].ToString());
-                info.Text = (info.Text = datosMascotas.Rows[0]["Historial Médico"].ToString());
                 sex.Text = (sex.Text = datosMascotas.Rows[0]["Sexo"].ToString());
                 propietario.Text = (propietario.Text = datosMascotas.Rows[0]["Propietario"].ToString());
+                veterinario.Text = (veterinario.Text = datosMascotas.Rows[0]["Veterinario"].ToString());
 
                 BuscaId.Text = "";//Dejamos el buscador de ID vacío
             }
@@ -52,6 +53,7 @@ namespace VetrinarioCovid_19_20
                 BuscaId.Text = "";
             }
         }
+        
 
         private void VentanaVeterinario_FormClosed(object sender, FormClosedEventArgs e)
         {

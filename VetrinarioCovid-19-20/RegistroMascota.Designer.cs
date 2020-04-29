@@ -37,10 +37,12 @@
             this.Registrar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.DNI = new System.Windows.Forms.TextBox();
             this.sex = new System.Windows.Forms.TextBox();
             this.Sexo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Veterinario = new System.Windows.Forms.TextBox();
+            this.Propietario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Nombre
@@ -90,7 +92,7 @@
             // 
             // Registrar
             // 
-            this.Registrar.Location = new System.Drawing.Point(95, 340);
+            this.Registrar.Location = new System.Drawing.Point(100, 414);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(121, 47);
             this.Registrar.TabIndex = 8;
@@ -113,45 +115,62 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "ID";
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(13, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "DNI";
-            // 
-            // DNI
-            // 
-            this.DNI.Location = new System.Drawing.Point(119, 239);
-            this.DNI.Name = "DNI";
-            this.DNI.Size = new System.Drawing.Size(186, 22);
-            this.DNI.TabIndex = 12;
-            // 
             // sex
             // 
-            this.sex.Location = new System.Drawing.Point(120, 285);
+            this.sex.Location = new System.Drawing.Point(120, 242);
             this.sex.Name = "sex";
             this.sex.Size = new System.Drawing.Size(186, 22);
             this.sex.TabIndex = 13;
             // 
             // Sexo
             // 
-            this.Sexo.Location = new System.Drawing.Point(12, 284);
+            this.Sexo.Location = new System.Drawing.Point(12, 241);
             this.Sexo.Name = "Sexo";
             this.Sexo.Size = new System.Drawing.Size(100, 23);
             this.Sexo.TabIndex = 14;
             this.Sexo.Text = "Sexo";
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(12, 347);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Veterinario";
+            // 
+            // Veterinario
+            // 
+            this.Veterinario.Location = new System.Drawing.Point(120, 348);
+            this.Veterinario.Name = "Veterinario";
+            this.Veterinario.Size = new System.Drawing.Size(186, 22);
+            this.Veterinario.TabIndex = 17;
+            // 
+            // Propietario
+            // 
+            this.Propietario.Location = new System.Drawing.Point(120, 290);
+            this.Propietario.Name = "Propietario";
+            this.Propietario.Size = new System.Drawing.Size(186, 22);
+            this.Propietario.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(13, 293);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Propietario";
+            // 
             // RegistroMascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 418);
+            this.ClientSize = new System.Drawing.Size(318, 473);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Veterinario);
+            this.Controls.Add(this.Propietario);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Sexo);
             this.Controls.Add(this.sex);
-            this.Controls.Add(this.DNI);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Registrar);
@@ -180,9 +199,11 @@
         private System.Windows.Forms.Button Registrar;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox DNI;
         private System.Windows.Forms.TextBox sex;
         private System.Windows.Forms.Label Sexo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Veterinario;
+        private System.Windows.Forms.TextBox Propietario;
+        private System.Windows.Forms.Label label3;
     }
 }

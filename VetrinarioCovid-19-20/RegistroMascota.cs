@@ -13,10 +13,10 @@ namespace VetrinarioCovid_19_20
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //VentanaLogin v = new VentanaLogin();
-            MessageBox.Show(conexion.RegistraMascota(DNI.Text ,ID.Text, nom.Text, tip.Text, raz.Text));
+            VentanaLogin v = new VentanaLogin();
+            MessageBox.Show(conexion.RegistraMascota(ID.Text, nom.Text, tip.Text, raz.Text, sex.Text, Propietario.Text, Veterinario.Text));
             this.Close();
-            //v.Show();
+            v.Show();
         }
 
         private void RegistroMascota_FormClosed(object sender, FormClosedEventArgs e)
