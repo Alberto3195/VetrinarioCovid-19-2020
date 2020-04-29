@@ -30,10 +30,10 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.Pass = new System.Windows.Forms.TextBox();
-            this.Dirección = new System.Windows.Forms.TextBox();
+            this.Direccion = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
             this.DNI = new System.Windows.Forms.TextBox();
-            this.Teléfono = new System.Windows.Forms.TextBox();
+            this.Telefono = new System.Windows.Forms.TextBox();
             this.Apellidos = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,12 +62,12 @@
             this.Pass.Size = new System.Drawing.Size(242, 22);
             this.Pass.TabIndex = 35;
             // 
-            // Dirección
+            // Direccion
             // 
-            this.Dirección.Location = new System.Drawing.Point(279, 173);
-            this.Dirección.Name = "Dirección";
-            this.Dirección.Size = new System.Drawing.Size(242, 22);
-            this.Dirección.TabIndex = 34;
+            this.Direccion.Location = new System.Drawing.Point(279, 173);
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Size = new System.Drawing.Size(242, 22);
+            this.Direccion.TabIndex = 34;
             // 
             // Correo
             // 
@@ -83,12 +83,12 @@
             this.DNI.Size = new System.Drawing.Size(242, 22);
             this.DNI.TabIndex = 32;
             // 
-            // Teléfono
+            // Telefono
             // 
-            this.Teléfono.Location = new System.Drawing.Point(8, 173);
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.Size = new System.Drawing.Size(242, 22);
-            this.Teléfono.TabIndex = 31;
+            this.Telefono.Location = new System.Drawing.Point(8, 173);
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Size = new System.Drawing.Size(242, 22);
+            this.Telefono.TabIndex = 31;
             // 
             // Apellidos
             // 
@@ -174,10 +174,10 @@
             this.ClientSize = new System.Drawing.Size(538, 359);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Pass);
-            this.Controls.Add(this.Dirección);
+            this.Controls.Add(this.Direccion);
             this.Controls.Add(this.Correo);
             this.Controls.Add(this.DNI);
-            this.Controls.Add(this.Teléfono);
+            this.Controls.Add(this.Telefono);
             this.Controls.Add(this.Apellidos);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.label8);
@@ -199,10 +199,10 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox Pass;
-        private System.Windows.Forms.TextBox Dirección;
+        private System.Windows.Forms.TextBox Direccion;
         private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.TextBox DNI;
-        private System.Windows.Forms.TextBox Teléfono;
+        private System.Windows.Forms.TextBox Telefono;
         private System.Windows.Forms.TextBox Apellidos;
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label8;

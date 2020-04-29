@@ -48,8 +48,8 @@ namespace VetrinarioCovid_19_20
 
                 if (resultado.Read())
                 {
-                    string contraseña = resultado.GetString("Contraseña");
-                    if (BCrypt.Net.BCrypt.Verify(Pass, Pass))
+                    string contraseña = resultado.GetString("Pass");
+                    if (BCrypt.Net.BCrypt.Verify(Pass, contraseña))
                     {
                         return true;
                     }
@@ -115,13 +115,13 @@ namespace VetrinarioCovid_19_20
         /// <param name="Apellidos"></param>
         /// <param name="DNI"></param>
         /// <param name="Correo"></param>
-        /// <param name="Dirección"></param>
-        /// <param name="Teléfono"></param>
+        /// <param name="Direccion"></param>
+        /// <param name="Telefono"></param>
         /// <param name="Pass"></param>
         /// <returns></returns>
-        public String insertaUsuario (String Nombre, String Apellidos,
+        public String insertaCliente (String Nombre, String Apellidos,
                                        String DNI, String Correo,
-                                       String Dirección, String Teléfono,
+                                       String Direccion, String Telefono,
                                        String Pass)
         {
             try
@@ -130,16 +130,16 @@ namespace VetrinarioCovid_19_20
                 MySqlCommand consulta =
                     new MySqlCommand("INSERT INTO clientes " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
-                                     "Dirección, Teléfono, Pass) " +
+                                     "Direccion, Telefono, Pass) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Dirección, @Teléfono, @Pass)", mysqlconnection);
+                                     "@Direccion, @Telefono, @Pass)", mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
                 consulta.Parameters.AddWithValue("@Correo", Correo);
-                consulta.Parameters.AddWithValue("@Dirección", Dirección);
-                consulta.Parameters.AddWithValue("@Teléfono", Teléfono);
+                consulta.Parameters.AddWithValue("@Direccion", Direccion);
+                consulta.Parameters.AddWithValue("@Telefono", Telefono);
                 consulta.Parameters.AddWithValue("@Pass", Pass);
 
                 consulta.ExecuteNonQuery();
@@ -164,7 +164,6 @@ namespace VetrinarioCovid_19_20
         /// <param name="Correo"></param>
         /// <param name="Dirección"></param>
         /// <param name="Teléfono"></param>
-        /// <param name="Usuario"></param>
         /// <param name="Contraseña"></param>
         /// <returns></returns>
 
@@ -179,16 +178,16 @@ namespace VetrinarioCovid_19_20
                 MySqlCommand consulta =
                     new MySqlCommand("INSERT INTO veterinarios " +
                                      "(Nombre, Apellidos, DNI, Correo, " +
-                                     "Dirección, Teléfono, Contraseña) " +
+                                     "Direccion, Telefono, Contraseña) " +
                                      "VALUES (@Nombre, @Apellidos, @DNI, @Correo," +
-                                     "@Dirección, @Teléfono, @Contraseña)", mysqlconnection);
+                                     "@Direccion, @Telefono, @Contraseña)", mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Apellidos", Apellidos);
                 consulta.Parameters.AddWithValue("@DNI", DNI);
                 consulta.Parameters.AddWithValue("@Correo", Correo);
-                consulta.Parameters.AddWithValue("@Dirección", Dirección);
-                consulta.Parameters.AddWithValue("@Teléfono", Teléfono);
+                consulta.Parameters.AddWithValue("@Direccion", Dirección);
+                consulta.Parameters.AddWithValue("@Telfono", Teléfono);
                 consulta.Parameters.AddWithValue("@Contraseña", Contraseña);
 
                 consulta.ExecuteNonQuery();
@@ -213,20 +212,22 @@ namespace VetrinarioCovid_19_20
         /// <param name="Tipo">Tipo del animal (perro, gato, caballo...)</param>
         /// <param name="Raza">Raza del animal (chihuaha, persa, boxer...)</param>
         /// <returns>Devuelve un mensaje en funcion del resultado. Si inserta, OK, Si no, mensaje de fallo</returns>
-        public String RegistaMascota(String ID, String Nombre, String Tipo, String Raza)
+        public String RegistaMascota(String DNI, String ID, String Nombre, String Tipo, String Raza, String Sexo)
         {
             String resultado = "";
             try
             {
                 mysqlconnection.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO animal (ID, Nombre, Tipo, Raza) " +
-                                     "VALUES (@ID, @Nombre, @Tipo, @Raza)", mysqlconnection);
+                    new MySqlCommand("INSERT INTO animal (DNI, ID, Nombre, Tipo, Raza, Sexo) " +
+                                     "VALUES (@DNI, @ID, @Nombre, @Tipo, @Raza, @Sexo)", mysqlconnection);
 
                 consulta.Parameters.AddWithValue("@ID", ID);
                 consulta.Parameters.AddWithValue("@Nombre", Nombre);
                 consulta.Parameters.AddWithValue("@Tipo", Tipo);
                 consulta.Parameters.AddWithValue("@Raza", Raza);
+                consulta.Parameters.AddWithValue("@Sexo", Sexo);
+                consulta.Parameters.AddWithValue("@DNI", DNI);
 
                 consulta.ExecuteNonQuery();
 

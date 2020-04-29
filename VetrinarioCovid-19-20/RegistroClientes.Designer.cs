@@ -37,10 +37,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.Apellidos = new System.Windows.Forms.TextBox();
-            this.Teléfono = new System.Windows.Forms.TextBox();
+            this.Telefono = new System.Windows.Forms.TextBox();
             this.DNI = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
-            this.Dirección = new System.Windows.Forms.TextBox();
+            this.Direccion = new System.Windows.Forms.TextBox();
             this.Pass = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -122,12 +122,12 @@
             this.Apellidos.Size = new System.Drawing.Size(242, 22);
             this.Apellidos.TabIndex = 11;
             // 
-            // Teléfono
+            // Telefono
             // 
-            this.Teléfono.Location = new System.Drawing.Point(12, 171);
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.Size = new System.Drawing.Size(242, 22);
-            this.Teléfono.TabIndex = 13;
+            this.Telefono.Location = new System.Drawing.Point(12, 171);
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Size = new System.Drawing.Size(242, 22);
+            this.Telefono.TabIndex = 13;
             // 
             // DNI
             // 
@@ -143,12 +143,12 @@
             this.Correo.Size = new System.Drawing.Size(242, 22);
             this.Correo.TabIndex = 15;
             // 
-            // Dirección
+            // Direccion
             // 
-            this.Dirección.Location = new System.Drawing.Point(283, 171);
-            this.Dirección.Name = "Dirección";
-            this.Dirección.Size = new System.Drawing.Size(242, 22);
-            this.Dirección.TabIndex = 16;
+            this.Direccion.Location = new System.Drawing.Point(283, 171);
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Size = new System.Drawing.Size(242, 22);
+            this.Direccion.TabIndex = 16;
             // 
             // Pass
             // 
@@ -174,10 +174,10 @@
             this.ClientSize = new System.Drawing.Size(543, 360);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Pass);
-            this.Controls.Add(this.Dirección);
+            this.Controls.Add(this.Direccion);
             this.Controls.Add(this.Correo);
             this.Controls.Add(this.DNI);
-            this.Controls.Add(this.Teléfono);
+            this.Controls.Add(this.Telefono);
             this.Controls.Add(this.Apellidos);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.label8);
@@ -205,10 +205,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.TextBox Apellidos;
-        private System.Windows.Forms.TextBox Teléfono;
+        private System.Windows.Forms.TextBox Telefono;
         private System.Windows.Forms.TextBox DNI;
         private System.Windows.Forms.TextBox Correo;
-        private System.Windows.Forms.TextBox Dirección;
+        private System.Windows.Forms.TextBox Direccion;
         private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.Button button1;
     }

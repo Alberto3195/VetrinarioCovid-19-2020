@@ -19,7 +19,7 @@ namespace VetrinarioCovid_19_20
             //string myHash = BCrypt.Net.BCrypt.HashPassword(textoPassword, BCrypt.Net.BCrypt.GenerateSalt());
 
             MessageBox.Show(conexion.insertaVeterinario(Nombre.Text, Apellidos.Text, DNI.Text,
-                                    Correo.Text, Dirección.Text, Teléfono.Text,
+                                    Correo.Text, Direccion.Text, Telefono.Text,
                                     Pass.Text));
             this.Close();
             login.Show();
