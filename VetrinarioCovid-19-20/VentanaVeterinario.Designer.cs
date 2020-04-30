@@ -43,7 +43,6 @@
             this.nom = new System.Windows.Forms.Label();
             this.tip = new System.Windows.Forms.Label();
             this.raz = new System.Windows.Forms.Label();
-            this.historial = new System.Windows.Forms.Label();
             this.Buscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BuscaId = new System.Windows.Forms.TextBox();
@@ -168,7 +167,6 @@
             this.tabPage2.Controls.Add(this.nom);
             this.tabPage2.Controls.Add(this.tip);
             this.tabPage2.Controls.Add(this.raz);
-            this.tabPage2.Controls.Add(this.historial);
             this.tabPage2.Controls.Add(this.Buscar);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.BuscaId);
@@ -182,59 +180,66 @@
             // 
             // veterinario
             // 
-            this.veterinario.Location = new System.Drawing.Point(6, 260);
+            this.veterinario.BackColor = System.Drawing.SystemColors.Info;
+            this.veterinario.Location = new System.Drawing.Point(14, 293);
             this.veterinario.Name = "veterinario";
-            this.veterinario.Size = new System.Drawing.Size(212, 23);
+            this.veterinario.Size = new System.Drawing.Size(382, 23);
             this.veterinario.TabIndex = 17;
+            this.veterinario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // propietario
             // 
-            this.propietario.Location = new System.Drawing.Point(12, 195);
+            this.propietario.BackColor = System.Drawing.SystemColors.Info;
+            this.propietario.Location = new System.Drawing.Point(14, 257);
             this.propietario.Name = "propietario";
-            this.propietario.Size = new System.Drawing.Size(212, 23);
+            this.propietario.Size = new System.Drawing.Size(382, 23);
             this.propietario.TabIndex = 16;
+            this.propietario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sex
             // 
-            this.sex.Location = new System.Drawing.Point(12, 161);
+            this.sex.BackColor = System.Drawing.SystemColors.Info;
+            this.sex.Location = new System.Drawing.Point(14, 221);
             this.sex.Name = "sex";
-            this.sex.Size = new System.Drawing.Size(212, 23);
+            this.sex.Size = new System.Drawing.Size(382, 23);
             this.sex.TabIndex = 15;
+            this.sex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // id
             // 
-            this.id.Location = new System.Drawing.Point(6, 65);
+            this.id.BackColor = System.Drawing.SystemColors.Info;
+            this.id.Location = new System.Drawing.Point(14, 80);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(291, 23);
+            this.id.Size = new System.Drawing.Size(382, 23);
             this.id.TabIndex = 14;
+            this.id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nom
             // 
-            this.nom.Location = new System.Drawing.Point(6, 88);
+            this.nom.BackColor = System.Drawing.SystemColors.Info;
+            this.nom.Location = new System.Drawing.Point(14, 112);
             this.nom.Name = "nom";
-            this.nom.Size = new System.Drawing.Size(291, 23);
+            this.nom.Size = new System.Drawing.Size(382, 23);
             this.nom.TabIndex = 13;
+            this.nom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tip
             // 
-            this.tip.Location = new System.Drawing.Point(9, 111);
+            this.tip.BackColor = System.Drawing.SystemColors.Info;
+            this.tip.Location = new System.Drawing.Point(14, 183);
             this.tip.Name = "tip";
-            this.tip.Size = new System.Drawing.Size(291, 23);
+            this.tip.Size = new System.Drawing.Size(382, 23);
             this.tip.TabIndex = 12;
+            this.tip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // raz
             // 
-            this.raz.Location = new System.Drawing.Point(9, 134);
+            this.raz.BackColor = System.Drawing.SystemColors.Info;
+            this.raz.Location = new System.Drawing.Point(14, 146);
             this.raz.Name = "raz";
-            this.raz.Size = new System.Drawing.Size(291, 23);
+            this.raz.Size = new System.Drawing.Size(382, 23);
             this.raz.TabIndex = 11;
-            // 
-            // historial
-            // 
-            this.historial.Location = new System.Drawing.Point(9, 271);
-            this.historial.Name = "historial";
-            this.historial.Size = new System.Drawing.Size(406, 217);
-            this.historial.TabIndex = 9;
+            this.raz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Buscar
             // 
@@ -648,7 +653,6 @@
         private System.Windows.Forms.Label nom;
         private System.Windows.Forms.Label tip;
         private System.Windows.Forms.Label raz;
-        private System.Windows.Forms.Label historial;
         private System.Windows.Forms.Label propietario;
         private System.Windows.Forms.Label sex;
         private System.Windows.Forms.Label veterinario;

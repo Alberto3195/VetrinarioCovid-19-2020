@@ -36,13 +36,13 @@ namespace VetrinarioCovid_19_20
                 datosMascotas = conexion.buscaMascota(BuscaId.Text);
 
                 //Seleccionamos los datos y los labels donde aparecerán dentro de nuestra app
-                id.Text = (id.Text = datosMascotas.Rows[0]["ID"].ToString());
-                nom.Text = (nom.Text = datosMascotas.Rows[0]["Nombre"].ToString());
-                tip.Text = (tip.Text = datosMascotas.Rows[0]["Tipo"].ToString());
-                raz.Text = (raz.Text = datosMascotas.Rows[0]["Raza"].ToString());
-                sex.Text = (sex.Text = datosMascotas.Rows[0]["Sexo"].ToString());
-                propietario.Text = (propietario.Text = datosMascotas.Rows[0]["Propietario"].ToString());
-                veterinario.Text = (veterinario.Text = datosMascotas.Rows[0]["Veterinario"].ToString());
+                id.Text = "ID: " + (id.Text = datosMascotas.Rows[0]["ID"].ToString());
+                nom.Text = "Nombre: " + (nom.Text = datosMascotas.Rows[0]["Nombre"].ToString());
+                tip.Text = "Tipo: " + (tip.Text = datosMascotas.Rows[0]["Tipo"].ToString());
+                raz.Text = "Raza: " + (raz.Text = datosMascotas.Rows[0]["Raza"].ToString());
+                sex.Text = "Sexo: " + (sex.Text = datosMascotas.Rows[0]["Sexo"].ToString());
+                propietario.Text = "Propietario: " + (propietario.Text = datosMascotas.Rows[0]["Propietario"].ToString());
+                veterinario.Text = "Veterinario: " + (veterinario.Text = datosMascotas.Rows[0]["Veterinario"].ToString());
 
                 BuscaId.Text = "";//Dejamos el buscador de ID vacío
             }
