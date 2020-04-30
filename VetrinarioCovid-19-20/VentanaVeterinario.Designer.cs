@@ -34,9 +34,9 @@
             this.Reseñas = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Apellidos = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.veterinario = new System.Windows.Forms.Label();
             this.propietario = new System.Windows.Forms.Label();
             this.sex = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.Label();
@@ -54,20 +54,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -75,17 +71,21 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.veterinario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -126,6 +126,8 @@
             this.Reseñas.Name = "Reseñas";
             this.Reseñas.Size = new System.Drawing.Size(399, 130);
             this.Reseñas.TabIndex = 2;
+            this.Reseñas.Text = "Menú interaccional";
+            this.Reseñas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -144,15 +146,8 @@
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.Size = new System.Drawing.Size(286, 36);
             this.Apellidos.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 93);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Apellidos.Text = "Apellido del usuario";
+            this.Apellidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Nombre
             // 
@@ -161,6 +156,8 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(286, 37);
             this.Nombre.TabIndex = 0;
+            this.Nombre.Text = "Nombre del usuario";
+            this.Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
@@ -182,6 +179,13 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Localizador";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // veterinario
+            // 
+            this.veterinario.Location = new System.Drawing.Point(6, 260);
+            this.veterinario.Name = "veterinario";
+            this.veterinario.Size = new System.Drawing.Size(212, 23);
+            this.veterinario.TabIndex = 17;
             // 
             // propietario
             // 
@@ -266,20 +270,16 @@
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.pictureBox6);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.panel6);
             this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.pictureBox4);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.panel5);
             this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.pictureBox3);
-            this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.panel4);
@@ -287,9 +287,13 @@
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.panel2);
+            this.tabPage3.Controls.Add(this.pictureBox6);
+            this.tabPage3.Controls.Add(this.pictureBox4);
+            this.tabPage3.Controls.Add(this.pictureBox3);
+            this.tabPage3.Controls.Add(this.pictureBox2);
+            this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -345,14 +349,6 @@
             this.label11.Size = new System.Drawing.Size(77, 31);
             this.label11.TabIndex = 36;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(13, 389);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox6.TabIndex = 34;
-            this.pictureBox6.TabStop = false;
-            // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.SystemColors.GrayText;
@@ -395,14 +391,6 @@
             this.label8.Size = new System.Drawing.Size(77, 31);
             this.label8.TabIndex = 36;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(9, 296);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.SystemColors.GrayText;
@@ -444,22 +432,6 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 27);
             this.label6.TabIndex = 41;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(9, 203);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(11, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox2.TabIndex = 40;
-            this.pictureBox2.TabStop = false;
             // 
             // button2
             // 
@@ -521,14 +493,6 @@
             this.label15.Size = new System.Drawing.Size(233, 27);
             this.label15.TabIndex = 35;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(11, 17);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(76, 69);
-            this.pictureBox5.TabIndex = 34;
-            this.pictureBox5.TabStop = false;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -557,12 +521,57 @@
             this.tabPage4.Text = "Chat";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // veterinario
+            // pictureBox1
             // 
-            this.veterinario.Location = new System.Drawing.Point(6, 260);
-            this.veterinario.Name = "veterinario";
-            this.veterinario.Size = new System.Drawing.Size(212, 23);
-            this.veterinario.TabIndex = 17;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox1.BackgroundImage = global::VetrinarioCovid_19_20.Properties.Resources.IMG_5226;
+            this.pictureBox1.Image = global::VetrinarioCovid_19_20.Properties.Resources.descarga;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(13, 389);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox6.TabIndex = 34;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(9, 296);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(9, 203);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(11, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(11, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(76, 69);
+            this.pictureBox5.TabIndex = 34;
+            this.pictureBox5.TabStop = false;
             // 
             // VentanaVeterinario
             // 
@@ -577,10 +586,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
